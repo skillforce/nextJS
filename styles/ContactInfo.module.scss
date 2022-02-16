@@ -1,0 +1,29 @@
+.userForm {
+  border: 2px groove snow;
+  width: 50%;
+  border-radius: 8px;
+  margin: 0 auto;
+  display: flex;
+  .userPhoto {
+    width:200px;
+    height: 500px;
+    border: 1px solid grey;
+    background-color: grey;
+    color:black
+  }
+  .userInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    .commonInfo{
+      border: 1px solid grey;
+      color: white;
+    }
+    .addressInfo{
+      border: 1px solid grey;
+      color: white;
+    }
+  }
+
+
+}

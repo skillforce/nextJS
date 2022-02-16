@@ -1,5 +1,4 @@
 import s from '../styles/navbar.module.scss';
-import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link"
 import {useRouter} from "next/router";
