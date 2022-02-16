@@ -1,9 +1,11 @@
-import React from 'react';
+import React, {FC} from 'react';
 import Heading from "../../components/Heading";
 import Head from "next/head";
 import Link from "next/link";
+import {GetStaticProps} from 'next';
+import {Contact} from '../../types';
 
-export const getStaticProps = async () => {
+export const getStaticProps:GetStaticProps = async () => {
     const res = await fetch('https://jsonplaceholder.typicode.com/users')
     const data = await res.json()
 
@@ -17,7 +19,12 @@ export const getStaticProps = async () => {
     }
 }
 
-const Contacts = ({contacts}) => {
+
+type ContactsProps ={
+    contacts:Contact[]
+}
+
+const Contacts:FC<ContactsProps> = ({contacts}) => {
 
     return (
         <>

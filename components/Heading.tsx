@@ -1,5 +1,11 @@
 
-const Heading = ({tag,text}) => {
+type HeadingProps ={
+    tag?:any
+    text:string
+}
+
+
+const Heading = ({tag,text}:HeadingProps) => {
     const Tag = tag || 'h1'
     return (
         <Tag>

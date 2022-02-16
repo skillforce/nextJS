@@ -1,9 +1,10 @@
 import s from '../styles/navbar.module.scss';
-import Image from "next/image";
-import Link from "next/link"
-import {useRouter} from "next/router";
+import Image from 'next/image';
+import Link from 'next/link'
+import {useRouter} from 'next/router';
+import {FC} from 'react';
 
-const {nav, links,active} = s
+const {nav, links, active} = s
 
 const PATH = [
     {linkPath: '/', linkName: 'Home'},
@@ -12,13 +13,13 @@ const PATH = [
 ]
 
 
-const Navbar = () => {
+const Navbar: FC = () => {
 
     const {pathname} = useRouter()
     return (
         <nav className={nav}>
             <div>
-            <Image src={'/vpname_logo.png'} width={580} height={70} alt={'vpname_logo'}/>
+                <Image src={'/vpname_logo.png'} width={580} height={70} alt={'vpname_logo'}/>
             </div>
             <div className={links}>
                 {PATH.map(({linkPath, linkName}, i) => <Link

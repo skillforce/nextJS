@@ -1,9 +1,10 @@
 import Heading from "./Heading";
+import {FC} from 'react';
 
-const Footer = () => {
+const Footer:FC = () => {
     return (
         <footer>
-            <Heading text={'footer'} />
+            <Heading tag={'div'} text={'footer'} />
         </footer>
     );
 };

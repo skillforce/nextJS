@@ -3,8 +3,9 @@ import Layout from "../components/Layout";
 import bigImg from '../public/test_big_img.png'
 import Image from "next/image";
 import Head from "next/head";
+import {AppProps} from 'next/app';
 
-const MyApp = ({Component, pageProps}) => {
+const MyApp = ({Component, pageProps}:AppProps) => {
     return (
         <Layout>
             <Head>

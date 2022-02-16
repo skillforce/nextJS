@@ -1,6 +1,15 @@
 import Heading from "./Heading";
+import {Post} from '../types';
 
-const PostInfo = ({ post }) => {
+
+
+
+type PostInfoProps ={
+    post:Post
+}
+
+
+const PostInfo = ({ post }:PostInfoProps) => {
     const { title, body } = post || {};
 
     if (!post) {

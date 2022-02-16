@@ -1,11 +1,12 @@
 import React from 'react';
-import Head from "next/head";
-import Heading from "../../components/Heading";
-import ContactInfo from "../../components/ContactInfo";
+import Head from 'next/head';
+import ContactInfo from '../../components/ContactInfo';
+import {GetServerSideProps} from 'next';
+import {Contact} from '../../types';
 
 
 //SSR
-export const getServerSideProps = async (context) => {
+export const getServerSideProps:GetServerSideProps = async (context) => {
     const id = context.params.id
     const res = await fetch(`https://jsonplaceholder.typicode.com/users/${id}`)
     const data = await res.json()
@@ -20,8 +21,12 @@ export const getServerSideProps = async (context) => {
     }
 }
 
+type ContactProps={
+    contact:Contact
+}
 
-const Contact = ({contact}) => {
+
+const Contact = ({contact}:ContactProps) => {
     return (
         <>
             <Head>
