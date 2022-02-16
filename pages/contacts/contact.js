@@ -1,10 +1,15 @@
 import React from 'react';
-import {Head} from "next/document";
+import Head from "next/head";
 import Heading from "../../components/Heading";
 
 const Contact = () => {
     return (
-        <Heading tag={'div'} text={'Jack'}/>
+        <>
+            <Head>
+                <title>Contact</title>
+            </Head>
+            <Heading tag={'div'} text={'Jack'}/>
+        </>
     );
 };
 

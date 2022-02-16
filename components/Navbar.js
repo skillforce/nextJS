@@ -1,4 +1,6 @@
 import s from '../styles/navbar.module.scss';
+import Head from "next/head";
+import Image from "next/image";
 import Link from "next/link"
 import {useRouter} from "next/router";
 
@@ -14,11 +16,10 @@ const PATH = [
 const Navbar = () => {
 
     const {pathname} = useRouter()
-    console.log(pathname)
     return (
         <nav className={nav}>
             <div>
-                VPNAME
+            <Image src={'/vpname_logo.png'} width={580} height={70} alt={'vpname_logo'}/>
             </div>
             <div className={links}>
                 {PATH.map(({linkPath, linkName}, i) => <Link
